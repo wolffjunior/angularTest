@@ -1,0 +1,13 @@
+<div class="d-flex flex-row-reverse bd-highlight">
+    <div class="p-2 bd-highlight">
+        <div>
+            <h1>{{'Bem vindo, ' + user?.login}}</h1>
+        </div>
+    </div>
+</div>
+
+<div><h2 id="posts" class="text-center">Posts</h2></div>
+
+<div class ="d-flex justify-content-center flex-wrap">
+<app-info-card *ngFor="let post of posts" [post]="post" (clickEvent)="click($event)"></app-info-card>
+</div>

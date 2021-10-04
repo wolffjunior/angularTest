@@ -1,0 +1,24 @@
+<nav>
+  <li class="h-100 d-flex justify-content-between align-items-center">
+    <div class="bg-transparent d-flex">
+      <ol class="ml-4" *ngIf="isLogged"><a routerLink="/login">Login</a></ol>
+      <ol class="ml-4" *ngIf="isLogged"><a routerLink="/home">Home</a></ol>
+      <ol class="ml-4" *ngIf="isLogged"><a routerLink="/create-book">Create Books</a></ol>
+    </div>
+    <div class="bg-transparent d-flex mr-2">
+      <div class="bg-transparent">
+        <ol>
+          <input placeholder="Search">
+          <button class="btn btn-primary ml-2">Search</button>
+        </ol>
+      </div>
+      <div class="bg-transparent" *ngIf="isLogged">
+        <ol class="mx-2">
+          <button class="btn btn-primary ml-2" (click)="onLogout()">Logout</button>
+        </ol>
+      </div>
+    </div>
+  </li>
+</nav>
+
+<router-outlet></router-outlet>

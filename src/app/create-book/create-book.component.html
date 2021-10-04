@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <form id="myForm" class="card border-0 shadow rounded-3 mt-5" [formGroup]="bookForm" (submit)="onsave()">
+            <div> 
+                <div class="p-5 text-center">
+                    <h2 class="card-title">Adicionar Livro</h2>
+                    <div>
+                        <label for="value">Livro</label>
+                        <input class="form-control mb-3" formControlName="livro" placeholder="livro" type="text"> <br />
+                    </div>
+                    <div>
+                        <label for="value">Autor</label>
+                        <input class="form-control" formControlName="autor" placeholder="autor" type="text"> <br />
+                    </div>
+                        <div class="text-center">
+                        <button type="submit" class="btn btn-success" [disabled]="bookForm.invalid">Adicionar</button>
+                    </div>
+                </div>
+                </div>  
+            </form>
+    </div>
+</div>

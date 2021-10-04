@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <form id="myForm" class="card border-0 shadow rounded-3 mt-5" [formGroup]="loginForm" (submit)="save()">
+        <div> 
+          <div class="p-5 text-center">
+                <h2 class="card-title">Screen</h2>
+              <div>
+                <label for="value">Login</label>
+                <input class="form-control mb-3" formControlName="login" placeholder="Login" type="text"> <br />
+              </div>
+            <div>
+                <label for="value">Password</label>
+                <input class="form-control" formControlName="senha" placeholder="Password" type="password"> <br />
+            </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-success" [disabled]="loginForm.invalid">Submit</button>
+              </div>
+              <div class="at-4 mt-4">
+                <label><a routerLink="/register" class="link-info">Sign in</a></label>
+              </div>
+          </div>
+          </div>  
+        </form>
+    </div>
+</div>
+<div class="fundo">
+
+</div>

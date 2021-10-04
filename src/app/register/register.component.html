@@ -1,0 +1,24 @@
+<div class="w-100 d-flex align-items-center justify-content-center mt-5">
+    <div class="w-50 d-flex align-items-center justify-content-center">
+        <form class="d-flex align-items-center justify-content-center flex-column" [formGroup]="userForm" (submit)="onsave()">
+            <div class="mb-2">
+                <label for="value">Username</label>
+                <input class="form-control" formControlName="username" type="text">
+            </div>
+            <div class="mb-2">
+                <label for="value">Password</label>
+                <input class="form-control" formControlName="password" id="myUsernameinput">
+            </div>
+            <div class="mb-4 w-100">
+                <label for="value">Role</label>
+                <ng-select class="custom"
+                    [items] ="roles"
+                    [searchable]="false"
+                    [clearable]="false"
+                    formControlName="role">
+                </ng-select>
+            </div>
+            <button class="btn btn-primary" type="submit" [disabled]="userForm.invalid">Create</button>
+        </form>
+    </div>
+</div>
